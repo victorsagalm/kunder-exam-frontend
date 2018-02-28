@@ -1,0 +1,18 @@
+.customFooter{
+    background-color: map-get($colors, dark);
+    height: 76px;
+    color: map-get($customTextColors, footer);
+    font-size: 12.5px;
+    padding: 31.75px 0;
+
+    a{
+        padding: 0 10px;
+    }
+
+    .footerWrapper{
+        display: block;
+        margin: auto;
+        text-align: center;
+        margin-left: -8px;
+    }
+}

@@ -1,34 +1,5 @@
 home {
 
-    ion-header{
-
-        // background-color: map-get($colors, primary);
-        // ion-navbar, ion-title, ion-buttons, button{
-        //     background-color: map-get($colors, primary);
-        // }
-    
-        .kunderLogo{
-            margin-left: 30px;
-            height: 21px;
-        }
-    
-        .telecom{
-            color: map-get($customTextColors, telecom);
-            font-size: 18px;
-        }
-    
-        .menuButton{
-            height: 56px;
-            width: 56px;
-        }
-    
-        .menuIcon{
-            height: 10px;
-            width: 16px;
-        }
-    
-    }
-
     ion-content{
         height: 100%;
         width: 100%;
@@ -96,26 +67,6 @@ home {
         }
 
     }
-
-    ion-footer.customFooter{
-        background-color: map-get($colors, dark);
-        height: 76px;
-        color: map-get($customTextColors, footer);
-        font-size: 12.5px;
-        padding: 31.75px 0;
-
-        a{
-            padding: 0 10px;
-        }
-
-        .footerWrapper{
-            display: block;
-            margin: auto;
-            text-align: center;
-            margin-left: -8px;
-        }
-    }
-
 
 }
 
