@@ -4,7 +4,7 @@ home {
         height: 100%;
         width: 100%;
 
-        .smartphoneLogo{
+        .header{
             position: relative;
             min-height: 207px;
             height: 32.9vh;
@@ -33,6 +33,22 @@ home {
                 background-position-y: calc(50% - 1.31em);
                 height: calc(50vh - 16.45vh - 36px - 28px);
                 width: 50%;
+
+                $buttonBorderColor : rgb(233, 233, 233);
+
+                &:nth-child(2){
+                    border-left: solid 2px $buttonBorderColor;
+                }
+
+                &:nth-child(3){
+                    border-top: solid 2px $buttonBorderColor;
+                }
+
+                &:nth-child(4){
+                    border-left: solid 2px $buttonBorderColor;
+                    border-top: solid 2px $buttonBorderColor;
+                }
+
             }
 
             .buttonConsumo{
@@ -56,14 +72,6 @@ home {
                 display: block;
                 margin: auto;
                 margin-top: 8vh;
-            }
-
-            .borderTop{
-                border-top: solid 2px rgb(233, 233, 233);
-            }
-
-            .borderLeft{
-                border-left: solid 2px rgb(233, 233, 233);
             }
 
         }
