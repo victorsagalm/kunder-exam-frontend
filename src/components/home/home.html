@@ -13,38 +13,28 @@
     </ion-navbar>
   </ion-header>
 <ion-content no-padding scroll="false">
-  <div class="banner">
-    <img src="assets/imgs/smartphone-logo.svg" class="smartphoneLogo">
+  <div class="smartphoneLogo">
   </div>
   <div class="buttons">
-    <table>
-      <tr>
-        <td>
-          <img src="assets/imgs/i-up-down-arrows.svg" class="customIcon">
-          <span>Consumo</span>
-        </td>
-        <td class="borderLeft">
-          <img src="assets/imgs/i-smartphone.svg" class="customIcon">
-          <span>Mi Plan</span>
-        </td>
-      </tr>
-      <tr>
-          <td class="borderTop">
-            <img src="assets/imgs/i-shop-bag.svg" class="customIcon">
-            <span>Mis bolsas</span>
-          </td>
-          <td class="borderTop borderLeft">
-            <img src="assets/imgs/i-star.svg" class="customIcon">
-            <span>Beneficios</span>
-          </td>
-        </tr>
-    </table>
+    <div class="rowTop">
+      <button class="buttonsHome buttonConsumo">
+        <span>Consumo</span>
+      </button>
+      <button class="buttonsHome buttonPlan borderLeft">
+        <span>Mi Plan</span>
+      </button>
+    </div>
+    <div class="rowTop">
+      <button class="buttonsHome buttonBolsas borderTop">
+        <span>Mis bolsas</span>
+      </button>
+      <button class="buttonsHome buttonBeneficios borderTop borderLeft">
+        <span>Beneficios</span>
+      </button>
+    </div>
   </div>
 </ion-content>
 <ion-footer class="customFooter">
-  <div class="footerWrapper">
-      <a>Sucursales</a>
-      <span>|</span>
-      <a>Consultas</a>
-  </div>
+      <a class="shuffleRight">Sucursales</a>
+      <a class="shuffleLeft">Consultas</a>
 </ion-footer>

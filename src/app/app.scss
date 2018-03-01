@@ -17,7 +17,10 @@
 
 @font-face{
     font-family: "brandon-grotesque-regular";
-    src: url('assets/fonts/Brandon-Grotesque/Brandon-reg.otf')format('otf');
+    src: url('../assets/fonts/Brandon-Grotesque/Brandon-reg.otf')format('otf'),
+         url('../assets/fonts/Brandon-Grotesque/brandon_reg-webfont.woff2') format('woff2'),
+         url('../assets/fonts/Brandon-Grotesque/brandon_reg-webfont.woff') format('woff'),
+         url('../assets/fonts/Brandon-Grotesque/brandon_reg-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
