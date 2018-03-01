@@ -7,14 +7,14 @@ home {
             position: relative;
             min-height: 207px;
             height: 32.9vh;
-            background: map-get($colors, secondary) url('../assets/imgs/smartphone-logo.svg') no-repeat center;
+            background: $grey-white url('../assets/imgs/smartphone-logo.svg') no-repeat center;
             background-size: 62px 72px;
         }
 
         .buttons{
             min-height: 290px;
             height: calc(100vh - 32.9vh - 76px - 56px);
-            background-color: map-get($colors, primary);
+            background-color: $white;
             font-size: 0;
             
             .buttonsHome{
@@ -22,8 +22,8 @@ home {
                 position: relative;
                 font-size: 16px;
                 padding: 0;
-                color: map-get($customTextColors, primary);
-                background: map-get($colors, primary) no-repeat center calc(50% - 1.31em);
+                color: $grey;
+                background: $white no-repeat center calc(50% - 1.31em);
                 height: calc(50vh - 16.45vh - 36px - 28px);
                 width: 50%;
 

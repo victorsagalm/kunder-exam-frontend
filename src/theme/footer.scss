@@ -1,7 +1,7 @@
 .informationFooter{
-    background-color: map-get($colors, dark);
+    background-color: $black;
     height: 76px;
-    color: map-get($customTextColors, footer);
+    color: $white;
     font-size: 12.5px;
     padding: 31.75px 0;
 
@@ -15,7 +15,7 @@
 
     .shuffleRight{
         left: 50%;
-        border-left: 1px solid map-get($customTextColors, footer);
+        border-left: 1px solid $white;
     }
     .shuffleLeft{
         right: 50%;

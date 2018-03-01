@@ -39,23 +39,26 @@ $app-direction: ltr;
 //   danger:     #f53d3d,
 //   light:      #f4f4f4,
 //   dark:       #222
+
 // );
 
-$colors: (
-  primary: white,
+$colors: ( // Ionic default variables made to fit app
+  primary: rgb(255,255,255),
   secondary: rgb(249,249,249),
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       rgb(29, 30, 48)
 );
 
-$customTextColors: (
-  primary:rgb(123, 126, 131),
-  telecom: rgb(157, 175, 193),
-  footer: white
-);
+$white : rgb(255,255,255);
 
+$grey-white : rgb(249,249,249);
 $grey-verylight : rgb(233, 233, 233);
+$grey-light : rgb(157, 175, 193);
+$grey : rgb(123, 126, 131);
+
+$black : rgb(29, 30, 48);
+
 
 
 // App iOS Variables
