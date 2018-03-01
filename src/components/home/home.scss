@@ -1,7 +1,4 @@
 home {
-
-    $buttonBorderColor : rgb(233, 233, 233);
-
     ion-content{
         height: 100%;
         width: 100%;
@@ -10,11 +7,8 @@ home {
             position: relative;
             min-height: 207px;
             height: 32.9vh;
-            background-color: map-get($colors, secondary);
-            background-image: url('../assets/imgs/smartphone-logo.svg');
+            background: map-get($colors, secondary) url('../assets/imgs/smartphone-logo.svg') no-repeat center;
             background-size: 62px 72px;
-            background-repeat: no-repeat;
-            background-position: center;
         }
 
         .buttons{
@@ -29,24 +23,21 @@ home {
                 font-size: 16px;
                 padding: 0;
                 color: map-get($customTextColors, primary);
-                background-color: map-get($colors, primary);
-                background-repeat: no-repeat;
-                background-position-x: center;
-                background-position-y: calc(50% - 1.31em);
+                background: map-get($colors, primary) no-repeat center calc(50% - 1.31em);
                 height: calc(50vh - 16.45vh - 36px - 28px);
                 width: 50%;
 
                 &:nth-child(2){
-                    border-left: solid 2px $buttonBorderColor;
+                    border-left: solid 2px $grey-verylight;
                 }
 
                 &:nth-child(3){
-                    border-top: solid 2px $buttonBorderColor;
+                    border-top: solid 2px $grey-verylight;
                 }
 
                 &:nth-child(4){
-                    border-left: solid 2px $buttonBorderColor;
-                    border-top: solid 2px $buttonBorderColor;
+                    border-left: solid 2px $grey-verylight;
+                    border-top: solid 2px $grey-verylight;
                 }
 
             }
