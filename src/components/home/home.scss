@@ -6,6 +6,7 @@ home {
 
         .smartphoneLogo{
             position: relative;
+            min-height: 207px;
             height: 32.9vh;
             background-color: map-get($colors, secondary);
             background-image: url('../assets/imgs/smartphone-logo.svg');
@@ -15,11 +16,13 @@ home {
         }
 
         .buttons{
-            height: 46.4vh;
+            min-height: 290px;
+            height: calc(100vh - 32.9vh - 76px - 56px);
             background-color: map-get($colors, primary);
             font-size: 0;
             
             .buttonsHome{
+                min-height: 145px;
                 position: relative;
                 font-size: 16px;
                 padding: 0;
@@ -28,7 +31,7 @@ home {
                 background-repeat: no-repeat;
                 background-position-x: center;
                 background-position-y: calc(50% - 1.31em);
-                height: 23.2vh;
+                height: calc(50vh - 16.45vh - 36px - 28px);
                 width: 50%;
             }
 
