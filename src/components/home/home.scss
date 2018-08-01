@@ -7,7 +7,7 @@ home {
             position: relative;
             min-height: 207px;
             height: 32.9vh;
-            background: $grey-white url('../assets/imgs/smartphone-logo.svg') no-repeat center;
+            background: $grey-white url('../../assets/imgs/smartphone-logo.svg') no-repeat center;
             background-size: 62px 72px;
         }
 
@@ -16,7 +16,7 @@ home {
             height: calc(100vh - 32.9vh - 76px - 56px);
             background-color: $white;
             font-size: 0;
-            
+
             .buttonsHome{
                 min-height: 145px;
                 position: relative;
@@ -43,19 +43,19 @@ home {
             }
 
             .buttonConsumo{
-                background-image: url('../assets/imgs/i-up-down-arrows.svg');
-                background-size: 1.3125em 1.9375em; // 21 31 
-            } 
+                background-image: url('../../assets/imgs/i-up-down-arrows.svg');
+                background-size: 1.3125em 1.9375em; // 21 31
+            }
             .buttonPlan{
-                background-image: url('../assets/imgs/i-smartphone.svg');
+                background-image: url('../../assets/imgs/i-smartphone.svg');
                 background-size: 1.1875em 2.0625em; // 19 33
             }
             .buttonBolsas{
-                background-image: url('../assets/imgs/i-shop-bag.svg');
+                background-image: url('../../assets/imgs/i-shop-bag.svg');
                 background-size: 2em 2em; // 32 32
             }
             .buttonBeneficios{
-                background-image: url('../assets/imgs/i-star.svg');
+                background-image: url('../../assets/imgs/i-star.svg');
                 background-size: 2em 1.875em; //32 30
             }
 
