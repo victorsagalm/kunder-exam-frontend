@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-banner',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
 
-  constructor() { }
+  products: any[] = [];
+
+  constructor(
+    protected productsService: ProductsService
+  ) { }
 
   ngOnInit() {
+
+    this.productsService.getProducts()
+    .subscribe(
+      (data) => {
+        this.products = data['product']
+        console.log(this.products);
+      },
+      (error) => {
+        console.log(error);
+      }
+
+    );
   }
 
 }
