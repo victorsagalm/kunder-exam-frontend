@@ -8,7 +8,9 @@ import { ProductsService } from '../../services/products.service';
 })
 export class BannerComponent implements OnInit {
 
-  products: any[] = [];
+ products: any[] = [];
+ product;
+ //products;
 
   constructor(
     protected productsService: ProductsService
@@ -16,10 +18,10 @@ export class BannerComponent implements OnInit {
 
   ngOnInit() {
 
-    this.productsService.getProducts()
+    this.product = this.productsService.getProducts()
     .subscribe(
       (data) => {
-        this.products = data['product']
+        this.products = data['product'];
         console.log(this.products);
       },
       (error) => {
@@ -27,6 +29,7 @@ export class BannerComponent implements OnInit {
       }
 
     );
+
   }
 
 }
