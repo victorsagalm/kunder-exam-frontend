@@ -1,19 +1,41 @@
-<div *ngIf="1" class="row">
+<div *ngIf="1" class="flex-md-row-reverse">
     {{data.product?.show}}
     <br> {{data.product?.backgroundImg}}
+    <br> {{data.product?.productImg}}
     <!-- <br> {{products.type}}
     
     <br> {{products.buttonText}}
-    <br> {{products.link}}
+  
     <br> {{products.productId}}
     <br> {{products.productImg}}
     <br> {{products.productName}}
     <br> {{products.productDescription}} -->
 </div>
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+<!-- <div [ngStyle]="{'background-image': 'url('+ data.product?.backgroundImg +')'}" id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src={{data.product?.backgroundImg}} class="d-block w-100" alt="...">
+            <img class="d-block" width="500" height="600" src="{{data.product?.productImg}}">
+        </div>
+    </div>
+</div> -->
+
+<div *ngIf="bannerType(); else productTemplate">
+    <div [ngStyle]="{'background-image': 'url('+ data.product?.backgroundImg +')'}" id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block" width="500" height="600" src="">
+            </div>
         </div>
     </div>
 </div>
+<ng-template #productTemplate>
+    <div class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block" width="500" height="600" src="{{data.product?.productImg}}">
+            </div>
+        </div>
+    </div>
+</ng-template>
+<!-- Try style="background-image:url({{ image.getURL() }})"
+"{background: 'url(/img/' + item.img + ')', width: '200px', height: '150px'" -->

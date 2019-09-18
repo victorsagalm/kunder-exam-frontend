@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../services/products.service';
+import { Product } from '../../models/Product';
 
 @Component({
   selector: 'app-banner',
@@ -9,15 +10,17 @@ import { ProductsService } from '../../services/products.service';
 export class BannerComponent implements OnInit {
 
  //products: any[] = [];
- product;
- image;
+ //product;
+// image;
  //products;
- products$;
+ //products$;
+ type;
 
- data = this.productsService.getProducts().subscribe(
-  product => {
-    this.data = product;
-    console.log(this.data);
+ data: Product = this.productsService.getProducts().subscribe(
+  (products: Product) => {
+    this.data = products;
+    this.type = this.data.product.type; 
+    console.log(this.type);
   }
 );
 
@@ -43,4 +46,10 @@ export class BannerComponent implements OnInit {
     
   }
 
+  bannerType() {
+    if(this.type == "plan"){
+      return true;
+    }
+    else return false;
+  }
 }
