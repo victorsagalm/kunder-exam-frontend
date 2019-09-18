@@ -1,11 +1,19 @@
-<div class="header">
-    {{products.show}}
-    <br> {{products.type}}
-    <br> {{products.backgroundImg}}
+<div *ngIf="1" class="row">
+    {{data.product?.show}}
+    <br> {{data.product?.backgroundImg}}
+    <!-- <br> {{products.type}}
+    
     <br> {{products.buttonText}}
     <br> {{products.link}}
     <br> {{products.productId}}
     <br> {{products.productImg}}
     <br> {{products.productName}}
-    <br> {{products.productDescription}}
+    <br> {{products.productDescription}} -->
+</div>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src={{data.product?.backgroundImg}} class="d-block w-100" alt="...">
+        </div>
+    </div>
 </div>

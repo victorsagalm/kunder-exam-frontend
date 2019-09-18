@@ -8,28 +8,39 @@ import { ProductsService } from '../../services/products.service';
 })
 export class BannerComponent implements OnInit {
 
- products: any[] = [];
+ //products: any[] = [];
  product;
+ image;
  //products;
+ products$;
+
+ data = this.productsService.getProducts().subscribe(
+  product => {
+    this.data = product;
+    console.log(this.data);
+  }
+);
 
   constructor(
     protected productsService: ProductsService
   ) { }
 
   ngOnInit() {
-
-    this.product = this.productsService.getProducts()
+    /* this.product = this.productsService.getProducts()
     .subscribe(
       (data) => {
-        this.products = data['product'];
-        console.log(this.products);
+      this.products = data['product'];
+      console.log(this.products);
+      this.image = this.products.productImg;
+        //console.log(this.products);
       },
       (error) => {
         console.log(error);
       }
 
-    );
+    ); */
 
+    
   }
 
 }
