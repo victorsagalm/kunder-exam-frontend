@@ -1,6 +1,5 @@
 export interface Product {
-    product?: any;
-    show: string,
+    show: boolean,
     type: string,
     backgroundImg: string,
     buttonText: string,

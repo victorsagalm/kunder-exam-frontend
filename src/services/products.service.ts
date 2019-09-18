@@ -11,6 +11,7 @@ export class ProductsService {
   constructor(protected http: HttpClient) { }
 
   getProducts(): Observable <Product> {
-    return this.http.get<Product>('https://hack.kunderlabs.com/exam/telecom/api/products/new');
+    let result = this.http.get<Product>('https://hack.kunderlabs.com/exam/telecom/api/products/new');
+    return result;
   }
 }

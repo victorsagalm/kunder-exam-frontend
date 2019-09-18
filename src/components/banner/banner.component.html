@@ -1,15 +1,13 @@
 <div *ngIf="1" class="flex-md-row-reverse">
-    {{data.product?.show}}
-    <br> {{data.product?.backgroundImg}}
-    <br> {{data.product?.productImg}}
-    <!-- <br> {{products.type}}
-    
-    <br> {{products.buttonText}}
-  
-    <br> {{products.productId}}
-    <br> {{products.productImg}}
-    <br> {{products.productName}}
-    <br> {{products.productDescription}} -->
+    {{products?.show}}
+    <br> {{products?.backgroundImg}}
+    <br> {{products?.productImg}}
+    <br> {{products?.type}}
+    <br> {{products?.buttonText}}
+    <br> {{products?.productId}}
+    <br> {{products?.productImg}}
+    <br> {{products?.productName}}
+    <br> {{products?.productDescription}}
 </div>
 <!-- <div [ngStyle]="{'background-image': 'url('+ data.product?.backgroundImg +')'}" id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
@@ -18,13 +16,13 @@
         </div>
     </div>
 </div> -->
+<div>
 
+</div>
 <div *ngIf="bannerType(); else productTemplate">
-    <div [ngStyle]="{'background-image': 'url('+ data.product?.backgroundImg +')'}" id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block" width="500" height="600" src="">
-            </div>
+    <div [ngStyle]="{'background-image': 'url('+ products?.backgroundImg +')'}" class="img-fluid">
+        <div>
+            <br>
         </div>
     </div>
 </div>
@@ -32,7 +30,7 @@
     <div class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block" width="500" height="600" src="{{data.product?.productImg}}">
+                <img class="d-block" width="500" height="600" src="{{products?.productImg}}">
             </div>
         </div>
     </div>

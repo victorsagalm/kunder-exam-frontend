@@ -12,23 +12,40 @@ export class BannerComponent implements OnInit {
  //products: any[] = [];
  //product;
 // image;
- //products;
+ products;
  //products$;
  type;
 
- data: Product = this.productsService.getProducts().subscribe(
-  (products: Product) => {
-    this.data = products;
-    this.type = this.data.product.type; 
-    console.log(this.type);
+/*  data$ = this.productsService.getProducts().subscribe(
+  (products: any) => {
+    console.log(products);
+    //this.type = this.data.product.type; 
+    console.log();
   }
-);
+); */
+
+ data$ = this.productsService.getProducts().subscribe((data:any) => {
+  this.products = data.product;
+  this.type = this.products.type;
+  console.log(this.products);
+  return this.products;
+  
+});
+
 
   constructor(
     protected productsService: ProductsService
   ) { }
 
   ngOnInit() {
+    /* this.data$.subscribe((data:Product) => {
+      this.products = data.product;
+      console.log(this.products);
+      return this.products;
+      
+    }); */
+
+    console.log(this.products)
     /* this.product = this.productsService.getProducts()
     .subscribe(
       (data) => {
