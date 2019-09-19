@@ -1,14 +1,4 @@
-<div class="flex-md-row-reverse">
-    {{products?.show}}
-    <br> {{products?.backgroundImg}}
-    <br> {{products?.productImg}}
-    <br> {{products?.type}}
-    <br> {{products?.buttonText}}
-    <br> {{products?.productId}}
-    <br> {{products?.productImg}}
-    <br> {{products?.productName}}
-    <br> {{products?.productDescription}}
-</div>
+<br>
 <div *ngIf="bannerVisible()">
     <div *ngIf="bannerType(); else productTemplate">
         <div [ngStyle]="{'background-image': 'url('+ products?.backgroundImg +')'}" class="main">
@@ -16,10 +6,10 @@
                 <div class="fadeIn d-flex justify-content-center">
                     <div class="row justify-content-center abs-center">
                         <div class="col-6">
-                            <h1 style="color: white">{{ products?.productDescription}}</h1>
+                            <h1 class="text-white">{{ products?.productDescription}}</h1>
                         </div>
                         <div class="col-6">
-                            <a class="btn btn-light" href="{{products?.link}}">{{products?.buttonText}}</a>
+                            <a class="btn btn-light btn-block btn-md" href="{{products?.link}}">{{products?.buttonText}}</a>
                         </div>
                     </div>
                 </div>
@@ -33,13 +23,12 @@
             <img class="rounded mx-auto d-block" src="{{products?.productImg}}">
         </div>
         <div class="col-6 abs-center">
-            <div class="row justify-content-center">
+            <div>
                 <h1>{{ products?.productName}}</h1>
-                <div class="row">
+                <div>
                     <h3> {{ products?.productDescription }} </h3>
                 </div>
             </div>
-
         </div>
     </div>
 </ng-template>

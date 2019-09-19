@@ -1,5 +1,6 @@
 div.main {
-    height: calc(100vh);
+    /* height: calc(100vh); */
+    min-height: 70vh;
     width: 100%;
     -webkit-background-size: inherit;
     -moz-background-size: inherit;
@@ -11,5 +12,5 @@ div.main {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 70vh;
 }
