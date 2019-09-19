@@ -1,4 +1,4 @@
-<div *ngIf="1" class="flex-md-row-reverse">
+<div class="flex-md-row-reverse">
     {{products?.show}}
     <br> {{products?.backgroundImg}}
     <br> {{products?.productImg}}
@@ -9,19 +9,12 @@
     <br> {{products?.productName}}
     <br> {{products?.productDescription}}
 </div>
-<!-- <div [ngStyle]="{'background-image': 'url('+ data.product?.backgroundImg +')'}" id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="d-block" width="500" height="600" src="{{data.product?.productImg}}">
-        </div>
-    </div>
-</div> -->
 <div *ngIf="bannerVisible()">
     <div *ngIf="bannerType(); else productTemplate">
         <div [ngStyle]="{'background-image': 'url('+ products?.backgroundImg +')'}" class="main">
             <div class="container">
                 <div class="fadeIn d-flex justify-content-center">
-                    <div class="row">
+                    <div class="row justify-content-center abs-center">
                         <div class="col-6">
                             <h1 style="color: white">{{ products?.productDescription}}</h1>
                         </div>
@@ -35,13 +28,18 @@
     </div>
 </div>
 <ng-template #productTemplate>
-    <div class="carousel slide " data-ride="carousel ">
-        <div class="carousel-inner ">
-            <div class="carousel-item active ">
-                <img class="d-block " width="500 " height="600 " src="{{products?.productImg}} ">
+    <div class="row">
+        <div class="col-6">
+            <img class="rounded mx-auto d-block" src="{{products?.productImg}}">
+        </div>
+        <div class="col-6 abs-center">
+            <div class="row justify-content-center">
+                <h1>{{ products?.productName}}</h1>
+                <div class="row">
+                    <h3> {{ products?.productDescription }} </h3>
+                </div>
             </div>
+
         </div>
     </div>
 </ng-template>
-<!-- Try style="background-image:url({{ image.getURL() }}) "
-"{background: 'url(/img/' + item.img + ')', width: '200px', height: '150px' " -->

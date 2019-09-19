@@ -17,14 +17,6 @@ export class BannerComponent implements OnInit {
  type;
  show;
 
-/*  data$ = this.productsService.getProducts().subscribe(
-  (products: any) => {
-    console.log(products);
-    //this.type = this.data.product.type; 
-    console.log();
-  }
-); */
-
  data$ = this.productsService.getProducts().subscribe((data:any) => {
   this.products = data.product;
   this.type = this.products.type;
@@ -40,29 +32,7 @@ export class BannerComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    /* this.data$.subscribe((data:Product) => {
-      this.products = data.product;
-      console.log(this.products);
-      return this.products;
-      
-    }); */
-
     console.log(this.products)
-    /* this.product = this.productsService.getProducts()
-    .subscribe(
-      (data) => {
-      this.products = data['product'];
-      console.log(this.products);
-      this.image = this.products.productImg;
-        //console.log(this.products);
-      },
-      (error) => {
-        console.log(error);
-      }
-
-    ); */
-
-    
   }
 
   bannerVisible() {
