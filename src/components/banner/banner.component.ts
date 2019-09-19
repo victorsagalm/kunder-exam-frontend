@@ -12,9 +12,10 @@ export class BannerComponent implements OnInit {
  //products: any[] = [];
  //product;
 // image;
- products;
+ products: Product;
  //products$;
  type;
+ show;
 
 /*  data$ = this.productsService.getProducts().subscribe(
   (products: any) => {
@@ -27,6 +28,7 @@ export class BannerComponent implements OnInit {
  data$ = this.productsService.getProducts().subscribe((data:any) => {
   this.products = data.product;
   this.type = this.products.type;
+  this.show = this.products.show;
   console.log(this.products);
   return this.products;
   
@@ -61,6 +63,13 @@ export class BannerComponent implements OnInit {
     ); */
 
     
+  }
+
+  bannerVisible() {
+    if(this.show == true){
+        return true;
+    }
+    else return false;
   }
 
   bannerType() {

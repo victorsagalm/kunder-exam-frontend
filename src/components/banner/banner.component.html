@@ -16,24 +16,32 @@
         </div>
     </div>
 </div> -->
-<div>
-
-</div>
-<div *ngIf="bannerType(); else productTemplate">
-    <div [ngStyle]="{'background-image': 'url('+ products?.backgroundImg +')'}" class="img-fluid">
-        <div>
-            <br>
+<div *ngIf="bannerVisible()">
+    <div *ngIf="bannerType(); else productTemplate">
+        <div [ngStyle]="{'background-image': 'url('+ products?.backgroundImg +')'}" class="main">
+            <div class="container">
+                <div class="fadeIn d-flex justify-content-center">
+                    <div class="row">
+                        <div class="col-6">
+                            <h1 style="color: white">{{ products?.productDescription}}</h1>
+                        </div>
+                        <div class="col-6">
+                            <a class="btn btn-light" href="{{products?.link}}">{{products?.buttonText}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <ng-template #productTemplate>
-    <div class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block" width="500" height="600" src="{{products?.productImg}}">
+    <div class="carousel slide " data-ride="carousel ">
+        <div class="carousel-inner ">
+            <div class="carousel-item active ">
+                <img class="d-block " width="500 " height="600 " src="{{products?.productImg}} ">
             </div>
         </div>
     </div>
 </ng-template>
-<!-- Try style="background-image:url({{ image.getURL() }})"
-"{background: 'url(/img/' + item.img + ')', width: '200px', height: '150px'" -->
+<!-- Try style="background-image:url({{ image.getURL() }}) "
+"{background: 'url(/img/' + item.img + ')', width: '200px', height: '150px' " -->
