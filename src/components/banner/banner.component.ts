@@ -21,7 +21,6 @@ export class BannerComponent implements OnInit {
   this.products = data.product;
   this.type = this.products.type;
   this.show = this.products.show;
-  console.log(this.products);
   return this.products;
   
 });
@@ -32,7 +31,6 @@ export class BannerComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log(this.products)
   }
 
   bannerVisible() {
